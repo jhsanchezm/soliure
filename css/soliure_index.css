@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baskervville&family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Shippori Micho', serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+/* Estructura de las Grids */
+.contenedor {
+  background-color: #D5C7BC;
+  width: 100%;
+  max-width: 1500px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, auto);
+  justify-content: center;
+}
+
+.contenedor > div,
+.contenedor> address,
+.contenedor .navbar,
+.contenedor section,
+.contenedor .horario {
+  background: #785964;      /*785964  D5C7BC 454545*/
+  padding: 20px;
+
+}
+
+.contenedor .logo {
+  /* font-family: Baskervville, serif; */
+  font-family: 'Libre Baskerville', serif;
+  font-size: 30px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.contenedor .navbar {
+  display: flex;
+  grid-column-start: 2;
+  grid-column-end: -1;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.navbar a {
+  color: #fff;
+  position: relative;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.contenedor header {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+.contenedor .areas_trabajo {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+.contenedor footer {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+/* Estilos Logo y Barra de Navegación */
+
+.contenedor .logo,
+.contenedor .navbar {
+  background-color: #785964;
+  color: #fff;
+  padding: 15px;
+}
+
+.contenedor .logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo a {
+  color: #fff;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+.contenedor .navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav a::after {
+  content: '';
+  border-bottom: 3px solid #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(10px);
+  transition: transform 0.3s ease;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+
+nav a:hover::after {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/* Estilos Header */
+
+header {
+  background-image: url("../img/libros.jpg");
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+}
+
+header::after {
+  content: '';
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.7;
+}
+
+
+header * {
+  position: relative;
+  z-index: 1;
+}
+
+header .temis {
+  width: 20%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  font-family: 'Libre Baskerville', serif;
+  /* border-top: 5px solid #fff;
+  border-bottom: 5px solid #fff; */
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  font-size: 60px;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+
+header p {
+  font-size: 30px;
+  margin: 0;
+  text-align: center;
+}
+
+/* Estilos Servicios */
+
+.contenedor #areas_trabajo {
+  background-color: #D5C7BC;
+  justify-content: center;
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+  /* Estilos del header de servicios */
+
+.header_border i {
+  left: 75px;
+  color: #785964;
+  font-size: 25px;
+}
+
+
+  /* Maquetación Servicios */
+#estante {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: repeat(1, auto 1fr 1fr auto);
+  grid-gap: 20px;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+
+    /* Estilos y diseños de las cajas de servicios */
+.services_box {
+  display: grid;
+  grid-row: span 4;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  margin-top: 30px;
+  padding: 40px;
+  width: 1fr;
+  height: 1fr;
+  grid-template-rows: subgrid;
+}
+
+.services_svg img {
+  width: 80px;
+  fill: #fff;
+}
+
+.services_box .heading_class {
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.heading_class a,
+.a_class a {
+  text-decoration: none;
+  color: #000;
+}
+
+.paragraph_class {
+  margin: 0;
+  color: #3b3b3b;
+}
+
+/* Efectos de las cajas de servicios */
+
+
+.services_box:hover {
+  border: 3px solid #785964;
+  transition: 0.3s ease;
+}
+
+.heading_class a:hover,
+.a_class a:hover {
+  color: #785964;
+  transition: 0.3s ease;
+}
+
+/* Sección de Datos de Contacto */
+
+    /* Santa Marta */
+.direccion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #D5C7BC;                  /*D5C7BC*/
+  text-decoration: none;
+}
+
+.direccion h4 {
+  text-align: left;
+  text-decoration: none;
+}
+
+.direccion p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+/* Horarios de atencion */
+
+.horario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #D5C7BC;
+}
+
+.horario p {
+  font-family: 'Montserrat',sans-serif;
+  text-align: center;
+  line-height: 1.5;
+}
+
+ /* Servicios en el Banner de contacto */
+
+.servicios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #D5C7BC;
+}
+
+.servicios li {
+  list-style-type: circle;
+  line-height: 1.5;
+}
+
+.servicios li > a {
+  font-family: 'Montserrat', sans-serif;
+  color: #D5C7BC;
+  text-decoration: none;
+}
+
+.servicios li > a:hover {
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+ /* Redes Sociales */
+
+.redes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #D5C7BC;
+  padding-bottom: 10px;
+}
+
+.social_ul{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social_ul a {
+  border-radius: 50%;
+  border: 1px solid #D5C7BC;
+  color: #D5C7BC;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  margin: 3px 6px;
+  height: 30px;
+  width: 30px;
+  text-decoration: none;
+}
+
+.social_ul a:hover {
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+  /* FOOTER */
+
+footer {
+  background-color: #454545;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Query */
+@media screen and (max-width: 768px) {
+  .contenedor .logo,
+  .contenedor .navbar,
+  .contenedor header,
+  .contenedor #areas_trabajo,
+  .contenedor .direccion,
+  .contenedor .horario,
+  .contenedor .servicios,
+  .contenedor .redes,
+  .contenedor .footer {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    }
+
+  .contenedor .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contenedor .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header .temis {
+    /* width: 30%;
+    height: auto; */
+    display: none;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #estante {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    max-width: 500px;
+    width: 100%;
+  }
+
+  .services_box {
+    width: 100%;
+  }
+
+  }

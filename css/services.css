@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baskervville&family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Shippori Mich', serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estructura de las Grids */
+.contenedor {
+  background: #D5C7BC;
+  width: 100%;
+  max-width: 1500px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(7, auto);
+  justify-content: center;
+}
+
+.contenedor > div,
+.contenedor > address,
+.contenedor .navbar,
+.contenedor section {
+  background: #785964;      /*785964  D5C7BC 454545*/
+  padding: 20px;
+}
+
+.contenedor .logo {
+  /* font-family: Baskervville, serif; */
+  font-family: 'Libre Baskerville', serif;
+  font-size: 30px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.contenedor .navbar {
+  display: flex;
+  grid-column-start: 2;
+  grid-column-end: -1;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.navbar a {
+  color: #fff;
+  position: relative;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.contenedor header,
+.contenedor .info_service,
+.contenedor .subcat {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+/* Estilos Logo y Barra de Navegación */
+
+.contenedor .logo,
+.contenedor .navbar {
+  background-color: #785964;
+  color: #fff;
+  padding: 15px;
+}
+
+.contenedor .logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo a {
+  color: #fff;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+.contenedor .navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav a::after {
+  content: '';
+  border-bottom: 3px solid #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(10px);
+  transition: transform 0.3s ease;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+
+nav a:hover::after {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/* Estilo Header */
+
+header {
+  background-image: url("img/money.jpg");
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 15vh;
+  position: relative;
+}
+
+header::after {
+  content: '';
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.7;
+}
+
+header * {
+  position: relative;
+  z-index: 1;
+}
+
+/*Estilos titulo*/
+
+.contenedor .info_service {
+  background: #D5C7BC;
+  display: flex;
+  justify-content: center;
+}
+
+.contenedor .titulo {
+  background: #D5C7BC;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+  position: relative;
+  text-align: justify;
+}
+
+.contenedor .img_titulo {
+  display: block;
+  width: 100%;
+}
+
+h2 {
+  margin-bottom: auto;
+  color: #785964;
+}
+
+h3 {
+  color: #785964;
+}
+
+h2, h3, p {
+  font-family: 'Roboto', sans-serif;
+}
+
+.subcat {
+  display:grid;
+  grid-template-columns: 30% auto auto;
+  grid-template-rows: repeat(7, auto);
+}
+
+.foto_subcat {
+  background-image: url(../img/panteon.jpg);
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: -1;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: auto;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.info_subcat {
+  grid-column-start: 3;
+  grid-column-end: -1;
+}
+
+.info_subcat h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.info_subcat p {
+  margin-top: 0;
+}
+
+/* Cuentenos su caso (consultanos) */
+
+section .consultanos {
+  background: #D5C7BC;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  align-items: flex-start;
+  padding-left: 0;
+}
+
+/* Sección de Datos de Contacto */
+
+    /* Santa Marta */
+.direccion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #D5C7BC;                    /*D5C7BC*/
+  text-decoration: none;
+}
+
+.direccion h4 {
+  text-align: left;
+}
+
+.direccion p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+/* Horarios de atencion */
+
+.horario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #D5C7BC;
+}
+
+.horario p {
+  font-family: 'Montserrat',sans-serif;
+  text-align: center;
+  line-height: 1.5;
+}
+
+ /* Servicios en el Banner de contacto */
+
+.servicios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #D5C7BC;
+}
+
+.servicios li {
+  list-style-type: circle;
+  line-height: 1.5;
+}
+
+.servicios li > a {
+  font-family: 'Montserrat', sans-serif;
+  color: #D5C7BC;
+  text-decoration: none;
+}
+
+.servicios li > a:hover {
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+ /* Redes Sociales */
+
+.redes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #D5C7BC;
+  padding-bottom: 10px;
+}
+
+.social_ul{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social_ul a {
+  border-radius: 50%;
+  border: 1px solid #D5C7BC;
+  color: #D5C7BC;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  margin: 3px 6px;
+  height: 30px;
+  width: 30px;
+  text-decoration: none;
+}
+
+.social_ul a:hover {
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+/* Footer */
+footer {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  background-color: #454545;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px;
+  text-align: center;
+}
+
+
+
+/* Media Query */
+
+@media screen and (max-width:768px) {
+  .logo,
+  .navbar,
+  .about,
+  .info_service,
+  .direccion,
+  .servicios,
+  .horario,
+  .redes,
+  .footer {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+
+  .contenedor .logo {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor .navbar {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subcat {
+
+  justify-content: center;
+}
+
+.icon {
+  width: 100%;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  padding: 10%;
+}
+
+.foto_subcat {
+  display: none;
+}
+
+}
